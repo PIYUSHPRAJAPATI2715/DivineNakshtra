@@ -75,14 +75,31 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
   .hero-content {
     align-items: center;
     text-align: center;
   }
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
   .hero-description {
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
+    font-size: 1rem;
+    padding: 0 1rem;
   }
   .hero-actions {
+    flex-direction: column;
     justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
 }

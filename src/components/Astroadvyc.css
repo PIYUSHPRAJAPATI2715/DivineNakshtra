@@ -140,6 +140,10 @@
 }
 
 @media (max-width: 992px) {
+  .astro-section {
+    padding: 5rem 0;
+  }
+  
   .astro-content-wrapper {
     flex-direction: column;
     text-align: center;
@@ -147,16 +151,18 @@
   
   .astro-features li {
     justify-content: center;
+    font-size: 1rem;
   }
 
   .astro-logo-img {
     margin: 0 auto;
+    max-width: 200px;
   }
   
   .astro-mockups-container {
     width: 100%;
     min-height: 400px;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   
   .mockup-gallery {
@@ -164,21 +170,29 @@
   }
   
   .astro-mockup-item {
-    max-width: 150px;
+    max-width: 140px;
   }
 }
 
 @media (max-width: 576px) {
+  .astro-title {
+    font-size: 2.2rem;
+  }
+  
+  .astro-desc {
+    font-size: 1rem;
+  }
+  
   .mockup-gallery {
-    height: 350px;
+    height: 300px;
   }
   
   .astro-mockup-item {
-    max-width: 120px;
+    max-width: 110px;
   }
   
-  .mockup-0 { left: 5%; }
-  .mockup-1 { left: 25%; }
-  .mockup-2 { left: 45%; }
-  .mockup-3 { left: 65%; }
+  .mockup-0 { left: 0%; transform: rotate(-5deg) translateY(10px); }
+  .mockup-1 { left: 20%; transform: rotate(-2deg) translateY(-5px); }
+  .mockup-2 { left: 40%; transform: rotate(2deg) translateY(-15px); }
+  .mockup-3 { left: 60%; transform: rotate(6deg) translateY(5px); }
 }
