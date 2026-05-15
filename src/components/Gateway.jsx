@@ -5,14 +5,14 @@ import './Gateway.css';
 
 const ExpandableText = ({ children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  
+
   return (
     <div className="expandable-text-container">
       <div className={`gt-desc ${isExpanded ? 'expanded' : 'collapsed'}`}>
         {children}
       </div>
-      <span 
-        className="view-more-btn" 
+      <span
+        className="view-more-btn"
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -81,7 +81,7 @@ const Gateway = ({ onEnterIT }) => {
             <img src="/astroadvyc_logo.png" alt="Astroadvyc" className="gt-logo gt-astro-logo" />
           </div>
           <div className="gt-content">
-            <h3>Astroadvyc Services</h3>
+            <h3>Astroadvyc Astrology Services</h3>
             <ExpandableText>
               <div className="gt-para">Astroadvyc connects ancient astrology with modern life through a powerful digital platform.</div>
               <div className="gt-para">Get instant guidance from verified astrologers, tarot readers, and pandits anytime, anywhere.</div>
@@ -113,7 +113,7 @@ const Gateway = ({ onEnterIT }) => {
             <h3>Enterprise IT Services</h3>
             <ExpandableText>Partner with Divine Nakshatra Private Limited to transform your business through cutting-edge digital solutions. We specialize in developing premium web applications, robust mobile platforms, and secure cloud infrastructure tailored to your enterprise needs. From initial UI/UX discovery to full-stack development and seamless deployment, our expert engineering team ensures flawless execution to drive innovation and unprecedented growth.</ExpandableText>
             <div className="gt-action text-blue">
-              <span>Enter Website</span>
+              <span>Explore Website</span>
               <ArrowRight size={18} />
             </div>
           </div>
