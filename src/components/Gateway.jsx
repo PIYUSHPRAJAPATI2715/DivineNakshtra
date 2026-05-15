@@ -122,7 +122,7 @@ const Gateway = ({ onEnterIT }) => {
 
           <div className="gt-clean-text">
             <h3>Charity Services</h3>
-            <ExpandableText>Join our mission to create a lasting, positive impact across the globe through the Divine Nakshatra Foundation. We are deeply committed to empowering underprivileged communities, advancing education, and providing essential resources. By leveraging technology for social good, our upcoming charity initiatives will bridge the gap between digital innovation and humanitarian aid to build a transparent platform dedicated to uplifting humanity.</ExpandableText>
+            <ExpandableText>Join our mission to create a lasting, positive impact across the globe through the Divine Nakshatra Sarvodya Foundation. We are deeply committed to empowering underprivileged communities, advancing education, and providing essential resources. By leveraging technology for social good, our upcoming charity initiatives will bridge the gap between digital innovation and humanitarian aid to build a transparent platform dedicated to uplifting humanity.</ExpandableText>
           </div>
 
           <button className="gt-btn-outline">COMING SOON</button>

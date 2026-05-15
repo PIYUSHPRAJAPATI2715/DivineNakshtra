@@ -170,14 +170,22 @@
 
 .gt-clean-logo {
   max-width: 90%;
-  max-height: 180px;
+  height: 160px;
   object-fit: contain;
   margin: auto;
   transition: transform 0.5s ease;
 }
 
-.clean-tile:hover .gt-clean-logo {
-  transform: scale(1.1) !important;
+.clean-tile:hover .gt-astro-logo {
+  transform: scale(1.05) !important;
+}
+
+.clean-tile:hover .gt-it-logo {
+  transform: scale(1.55) !important;
+}
+
+.clean-tile:hover .gt-foundation-logo {
+  transform: scale(1.25) !important;
 }
 
 .gt-btn-primary {

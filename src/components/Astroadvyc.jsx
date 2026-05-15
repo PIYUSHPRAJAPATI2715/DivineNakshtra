@@ -80,7 +80,7 @@ const Astroadvyc = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="tile-logo-wrapper">
-              <img src="/foundation.png" alt="Divine Nakshatra Foundation" className="tile-logo" />
+              <img src="/foundation.png" alt="Divine Nakshatra Sarvodaya Foundation" className="tile-logo" />
             </div>
             <div className="coming-soon-badge">
               Coming Soon

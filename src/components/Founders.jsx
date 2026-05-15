@@ -31,7 +31,7 @@ const Founders = () => {
       description: "Tech mastermind driving the architecture and scalable cloud infrastructure behind our premium platforms.",
     },
     {
-      name: "Maya A. Rozario",
+      name: "Maya A Rozario",
       role: "Co-Founder",
       image: "/maya.jpeg",
       description: "Strategic visionary ensuring our digital ecosystem seamlessly connects and empowers global communities.",
