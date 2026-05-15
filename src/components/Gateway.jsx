@@ -77,7 +77,7 @@ const Gateway = ({ onEnterIT }) => {
           whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(212,175,55,0.3)" }}
           whileTap={{ scale: 0.98 }}
         >
-          <img src="/astro.png" alt="Astroadvyc" className="gt-clean-logo gt-astro-logo" />
+          <img src="/astroadvyc_logo.png" alt="Astroadvyc" className="gt-clean-logo gt-astro-logo" />
 
           <div className="gt-clean-text">
             <h3>Astroadvyc Astrology Services</h3>
