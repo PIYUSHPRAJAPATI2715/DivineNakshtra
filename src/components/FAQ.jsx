@@ -44,12 +44,12 @@ const FAQ = () => {
       a: "We offer end-to-end IT solutions including full-stack web and mobile app development, scalable cloud architecture, strict cybersecurity audits, and advanced AI/Machine Learning integration for enterprise clients."
     },
     {
-      q: "How does the Astroadvyc platform work?",
-      a: "Astroadvyc is our proprietary platform that connects users with certified, verified astrologers in real-time. You can book live video/audio consultations, use instant chat, and generate detailed Kundli reports."
+      q: "What technologies do you specialize in for web and mobile development?",
+      a: "Our engineering team specializes in modern, scalable tech stacks including React, Next.js, and Node.js for web platforms, as well as cross-platform frameworks like Flutter and React Native for mobile applications."
     },
     {
-      q: "Are your astrologers verified?",
-      a: "Yes. Every astrologer on Astroadvyc goes through a rigorous multi-step vetting process, including background checks and astrology proficiency exams, before they are allowed on the platform."
+      q: "Do you provide custom cloud architecture and infrastructure management?",
+      a: "Yes, we design, deploy, and manage highly scalable and secure cloud architectures using AWS, Google Cloud, and Microsoft Azure, tailored specifically to your enterprise requirements."
     },
     {
       q: "Do you offer post-launch support for IT projects?",

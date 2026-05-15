@@ -19,9 +19,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Astroadvyc', href: '#astroadvyc' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Our Services', href: '#services' },
+    { name: 'Our Products', href: '#astroadvyc' },
   ];
 
   return (
@@ -32,20 +32,20 @@ const Navbar = () => {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <div className="container nav-container">
-        <motion.a 
-          href="#home" 
+        <motion.a
+          href="#home"
           className="logo"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img src="/dnpllogo.png" alt="DNPL Logo" style={{ height: '70px', width: 'auto', display: 'block' }} />
+          <img src="/dnpllogo.png" alt="DNPL Logo" style={{ height: '70px', width: 'auto', display: 'block', transform: 'scale(1.5)', transformOrigin: 'left center' }} />
         </motion.a>
 
         {/* Desktop Nav */}
         <nav className="desktop-nav">
           <ul className="nav-links">
             {navLinks.map((link, index) => (
-              <motion.li 
+              <motion.li
                 key={index}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -56,8 +56,8 @@ const Navbar = () => {
               </motion.li>
             ))}
           </ul>
-          <motion.a 
-            href="#contact" 
+          <motion.a
+            href="#contact"
             className="btn-primary nav-btn"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -86,8 +86,8 @@ const Navbar = () => {
         >
           <ul className="mobile-nav-links">
             {navLinks.map((link, index) => (
-              <motion.li 
-                key={index} 
+              <motion.li
+                key={index}
                 onClick={() => setIsOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}

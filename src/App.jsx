@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
+import Founders from './components/Founders';
 import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import Astroadvyc from './components/Astroadvyc';
@@ -100,6 +101,7 @@ function App() {
               <Hero />
               <TechStack />
               <AboutUs />
+              <Founders />
               <WhyChooseUs />
               <Services />
               <Process />

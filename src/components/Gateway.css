@@ -121,18 +121,96 @@
 }
 
 .gt-astro-logo {
-  transform: scale(0.85);
+  transform: scale(1.3);
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
 }
 
 .gt-it-logo {
-  transform: scale(1.6);
+  transform: scale(1.4);
   filter: drop-shadow(0 0 20px rgba(0, 195, 255, 0.3));
 }
 
 .gt-foundation-logo {
-  transform: scale(1.3);
+  transform: scale(1.1);
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+}
+
+/* New Clean Tile Styles */
+.clean-tile {
+  background: #0a0a14 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  min-height: 480px;
+}
+
+.gt-clean-text {
+  text-align: left;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.gt-clean-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #fff, #d4af37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.clean-tile:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.gt-clean-logo {
+  max-width: 90%;
+  max-height: 180px;
+  object-fit: contain;
+  margin: auto;
+  transition: transform 0.5s ease;
+}
+
+.clean-tile:hover .gt-clean-logo {
+  transform: scale(1.1) !important;
+}
+
+.gt-btn-primary {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #e8c366, #b8860b);
+  color: #050510;
+  font-weight: 700;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.gt-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.gt-btn-outline {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.05);
+  color: #d4af37;
+  font-weight: 700;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  font-size: 1rem;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
 }
 
 .gt-content {

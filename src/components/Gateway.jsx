@@ -72,15 +72,14 @@ const Gateway = ({ onEnterIT }) => {
         {/* Astroadvyc Tile */}
         <motion.a
           href="https://astroadvyc.com"
-          className="gateway-tile glass glow"
+          className="gateway-tile clean-tile glow"
           variants={itemVariants}
           whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(212,175,55,0.3)" }}
           whileTap={{ scale: 0.98 }}
         >
-          <div className="gt-logo-wrapper">
-            <img src="/astroadvyc_logo.png" alt="Astroadvyc" className="gt-logo gt-astro-logo" />
-          </div>
-          <div className="gt-content">
+          <img src="/astro.png" alt="Astroadvyc" className="gt-clean-logo gt-astro-logo" />
+
+          <div className="gt-clean-text">
             <h3>Astroadvyc Astrology Services</h3>
             <ExpandableText>
               <div className="gt-para">Astroadvyc connects ancient astrology with modern life through a powerful digital platform.</div>
@@ -91,49 +90,42 @@ const Gateway = ({ onEnterIT }) => {
               <div className="gt-para">Book authentic poojas and support meaningful charity through E-Daan for positive karma.</div>
               <div className="gt-para"><strong>Astroadvyc — your complete spiritual ecosystem where destiny meets guidance.</strong></div>
             </ExpandableText>
-            <div className="gt-action">
-              <span>Visit Portal</span>
-              <ExternalLink size={18} />
-            </div>
           </div>
+
+          <button className="gt-btn-primary">Visit Portal</button>
         </motion.a>
 
         {/* IT Service Tile */}
         <motion.div
-          className="gateway-tile glass glow cursor-pointer"
+          className="gateway-tile clean-tile glow cursor-pointer"
           variants={itemVariants}
-          whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(0,195,255,0.3)", borderColor: "rgba(0,195,255,0.5)" }}
+          whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(0,195,255,0.3)" }}
           whileTap={{ scale: 0.98 }}
           onClick={onEnterIT}
         >
-          <div className="gt-logo-wrapper">
-            <img src="/dnpllogo.png" alt="IT Services" className="gt-logo gt-it-logo" />
-          </div>
-          <div className="gt-content">
+          <img src="/dnpllogo.png" alt="IT Services" className="gt-clean-logo gt-it-logo" />
+
+          <div className="gt-clean-text">
             <h3>Enterprise IT Services</h3>
             <ExpandableText>Partner with Divine Nakshatra Private Limited to transform your business through cutting-edge digital solutions. We specialize in developing premium web applications, robust mobile platforms, and secure cloud infrastructure tailored to your enterprise needs. From initial UI/UX discovery to full-stack development and seamless deployment, our expert engineering team ensures flawless execution to drive innovation and unprecedented growth.</ExpandableText>
-            <div className="gt-action text-blue">
-              <span>Explore Website</span>
-              <ArrowRight size={18} />
-            </div>
           </div>
+
+          <button className="gt-btn-primary">Explore IT Portal</button>
         </motion.div>
 
         {/* Charity Service Tile */}
         <motion.div
-          className="gateway-tile glass gt-disabled"
+          className="gateway-tile clean-tile gt-disabled"
           variants={itemVariants}
         >
-          <div className="gt-logo-wrapper">
-            <img src="/foundation.png" alt="Divine Nakshatra Foundation" className="gt-logo gt-foundation-logo" />
-          </div>
-          <div className="gt-content">
+          <img src="/foundation.png" alt="Divine Nakshatra Foundation" className="gt-clean-logo gt-foundation-logo" />
+
+          <div className="gt-clean-text">
             <h3>Charity Services</h3>
             <ExpandableText>Join our mission to create a lasting, positive impact across the globe through the Divine Nakshatra Foundation. We are deeply committed to empowering underprivileged communities, advancing education, and providing essential resources. By leveraging technology for social good, our upcoming charity initiatives will bridge the gap between digital innovation and humanitarian aid to build a transparent platform dedicated to uplifting humanity.</ExpandableText>
-            <div className="gt-action-badge">
-              Coming Soon
-            </div>
           </div>
+
+          <button className="gt-btn-outline">COMING SOON</button>
         </motion.div>
       </motion.div>
     </div>
