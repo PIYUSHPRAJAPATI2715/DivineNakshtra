@@ -3,13 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
+import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import Astroadvyc from './components/Astroadvyc';
+import Testimonials from './components/Testimonials';
+import TechStack from './components/TechStack';
+import Process from './components/Process';
+import FAQ from './components/FAQ';
+import Contact from './components/Contact';
+import CTA from './components/CTA';
 import Footer from './components/Footer';
+import Gateway from './components/Gateway';
 import './index.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [showGateway, setShowGateway] = useState(true);
 
   useEffect(() => {
     // Simulate loading time for initial animations to be ready
@@ -40,15 +49,15 @@ function App() {
             }}
           >
             <motion.img 
-              src="/astroadvyc_logo.png" 
-              alt="Loading" 
-              style={{ maxWidth: '200px', filter: 'drop-shadow(0 0 20px rgba(212,175,55,0.5))' }}
+              src="/dnpllogo.png" 
+              alt="DNPL Loading" 
+              style={{ maxWidth: '400px', filter: 'drop-shadow(0 0 20px rgba(212,175,55,0.5))' }}
               animate={{ 
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 1, 0.5]
+                scale: [1, 1.05, 1],
+                opacity: [0.7, 1, 0.7]
               }}
               transition={{ 
-                duration: 1.5, 
+                duration: 2, 
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -66,22 +75,44 @@ function App() {
         )}
       </AnimatePresence>
 
-      {!loading && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <Navbar />
-          <main>
-            <Hero />
-            <AboutUs />
-            <Services />
-            <Astroadvyc />
-          </main>
-          <Footer />
-        </motion.div>
-      )}
+      <AnimatePresence mode="wait">
+        {!loading && showGateway && (
+          <motion.div
+            key="gateway"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Gateway onEnterIT={() => setShowGateway(false)} />
+          </motion.div>
+        )}
+
+        {!loading && !showGateway && (
+          <motion.div
+            key="main-site"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Navbar />
+            <main>
+              <Hero />
+              <TechStack />
+              <AboutUs />
+              <WhyChooseUs />
+              <Services />
+              <Process />
+              <Astroadvyc />
+              <Testimonials />
+              <FAQ />
+              <Contact />
+              <CTA />
+            </main>
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

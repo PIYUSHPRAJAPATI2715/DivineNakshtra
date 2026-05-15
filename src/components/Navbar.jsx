@@ -38,7 +38,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="logo-text text-gradient" style={{ fontSize: '1.4rem' }}>Divine Nakshatra</span>
+          <img src="/dnpllogo.png" alt="DNPL Logo" style={{ height: '70px', width: 'auto', display: 'block' }} />
         </motion.a>
 
         {/* Desktop Nav */}

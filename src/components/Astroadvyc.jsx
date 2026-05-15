@@ -1,9 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, MessageCircle, Phone, Calendar } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, MessageCircle, Phone, Calendar, X } from 'lucide-react';
 import './Astroadvyc.css';
 
 const Astroadvyc = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const features = [
     { icon: <Phone size={24} />, text: "Live Video Consultations" },
     { icon: <MessageCircle size={24} />, text: "Instant Chat with Astrologers" },
@@ -12,124 +14,132 @@ const Astroadvyc = () => {
   ];
 
   const mockups = [
-    "/astro_mockup_4.png", // Home
-    "/astro_mockup_3.png", // Astrologer List
-    "/astro_mockup_2.png", // Live
-    "/astro_mockup_1.png", // Astromall
+    "/astro_mockup_4.png",
+    "/astro_mockup_3.png",
+    "/astro_mockup_2.png",
+    "/astro_mockup_1.png",
   ];
 
+  // Prevent background scrolling when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isModalOpen]);
+
   return (
-    <section id="astroadvyc" className="astro-section">
+    <section id="astroadvyc" className="astro-product-section">
       <div className="container">
-        <div className="astro-content-wrapper">
-          <motion.div 
-            className="astro-text"
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, type: "spring" }}
+        <motion.div
+          className="section-header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="section-title">Our <span className="text-gradient">Products</span></h2>
+          <p className="section-subtitle">
+            We don't just build solutions for clients; we build and scale our own successful enterprise platforms.
+          </p>
+        </motion.div>
+
+        <div className="product-tile-container">
+          {/* Astroadvyc Tile */}
+          <motion.div
+            className="product-square-tile glass glow"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(212,175,55,0.2)" }}
           >
-            <motion.div 
-              className="badge glass"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(212,175,55,0.4)" }}
-            >
-              Featured Product
-            </motion.div>
-            
-            <motion.div 
-              className="astro-logo-wrapper"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <img src="/astroadvyc_logo.png" alt="Astroadvyc Logo" className="astro-logo-img" />
-            </motion.div>
-
-            <motion.p 
-              className="astro-desc"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Discover your destiny with Astroadvyc, Divine Nakshatra Private Limited's flagship astrology platform. 
-              Connect with top astrologers instantly, get your daily horoscope, and find answers to your life's biggest questions.
-            </motion.p>
-
-            <ul className="astro-features">
-              {features.map((feature, index) => (
-                <motion.li 
-                  key={index}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 + 0.5, type: "spring" }}
-                  whileHover={{ scale: 1.05, x: 10, color: "var(--primary-gold)" }}
-                >
-                  <motion.span 
-                    className="feature-icon"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {feature.icon}
-                  </motion.span>
-                  {feature.text}
-                </motion.li>
-              ))}
-            </ul>
-
-            <motion.button 
-              className="btn-primary glow mt-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(212,175,55,0.5)" }}
+            <div className="tile-logo-wrapper">
+              <img src="/astroadvyc_logo.png" alt="Astroadvyc Logo" className="tile-logo" />
+            </div>
+            <motion.button
+              className="btn-primary"
+              onClick={() => setIsModalOpen(true)}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Download App
+              See Full Story
             </motion.button>
           </motion.div>
 
-          <motion.div 
-            className="astro-mockups-container"
-            initial={{ opacity: 0, scale: 0.8 }}
+          {/* Divine Nakshatra Foundation Tile */}
+          <motion.div
+            className="product-square-tile glass glow disabled-tile"
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, delay: 0.2 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="astro-glow-bg"></div>
-            <div className="mockup-gallery">
-              {mockups.map((src, index) => (
-                <motion.img 
-                  key={index}
-                  src={src} 
-                  alt={`Astroadvyc App View ${index + 1}`} 
-                  className={`astro-mockup-item mockup-${index}`}
-                  initial={{ y: 100, opacity: 0, rotate: index * 2 - 5 }}
-                  whileInView={{ 
-                    y: 0, 
-                    opacity: 1,
-                    rotate: index * 4 - 5 
-                  }}
-                  viewport={{ once: true }}
-                  transition={{ 
-                    delay: 0.6 + index * 0.2, 
-                    duration: 0.8, 
-                    type: "spring",
-                    bounce: 0.4
-                  }}
-                  whileHover={{ 
-                    y: -30, 
-                    scale: 1.1, 
-                    zIndex: 10,
-                    rotate: 0,
-                    boxShadow: "0 30px 60px rgba(0,0,0,0.8)"
-                  }}
-                />
-              ))}
+            <div className="tile-logo-wrapper">
+              <img src="/foundation.png" alt="Divine Nakshatra Foundation" className="tile-logo" />
+            </div>
+            <div className="coming-soon-badge">
+              Coming Soon
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Full Story Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsModalOpen(false)}
+          >
+            <motion.div
+              className="modal-content glass"
+              initial={{ scale: 0.8, y: 50, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.8, y: 50, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
+            >
+              <button className="modal-close-btn" onClick={() => setIsModalOpen(false)}>
+                <X size={28} />
+              </button>
+
+              <div className="modal-body">
+                <div className="modal-text-content">
+                  <img src="/astroadvyc_logo.png" alt="Astroadvyc" className="modal-logo" />
+                  <h3 className="modal-title">Astroadvyc: Your Destiny, Decoded.</h3>
+                  <div className="modal-desc" style={{ textAlign: 'justify' }}>
+                    <p>Astroadvyc connects ancient astrology with modern life through a powerful digital platform. Get instant guidance from verified astrologers, tarot readers, and pandits anytime, anywhere. Find clarity in love, career, relationships, and life decisions with trusted spiritual experts.</p>
+
+                    <ul className="modal-features" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+                      <li><span className="feature-icon text-gold"><Phone size={20} /></span> Experience live video, voice, and chat consultations tailored to your journey.</li>
+                      <li><span className="feature-icon text-gold"><Star size={20} /></span> Explore AstroMart for gemstones, spiritual products, and energy-aligning remedies.</li>
+                      <li><span className="feature-icon text-gold"><Calendar size={20} /></span> Book authentic poojas and support meaningful charity through E-Daan for positive karma.</li>
+                    </ul>
+
+                    <p style={{ marginTop: '1rem', fontWeight: 'bold', color: 'var(--primary-gold)' }}>Astroadvyc — your complete spiritual ecosystem where destiny meets guidance.</p>
+                  </div>
+
+                  <button className="btn-secondary mt-4">Download App Now</button>
+                </div>
+
+                <div className="modal-gallery">
+                  {mockups.map((src, idx) => (
+                    <img key={idx} src={src} alt={`App screen ${idx}`} className="modal-mockup" />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -29,7 +29,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <motion.div className="footer-brand" variants={itemVariants}>
-            <h2 className="logo-text text-gradient">Divine Nakshatra</h2>
+            <img src="/dnpllogo.png" alt="DNPL Logo" style={{ height: '90px', width: 'auto', marginBottom: '1.5rem' }} />
             <p className="footer-desc">
               Divine Nakshatra Private Limited. Innovating the future of IT services while preserving cosmic wisdom through Astroadvyc.
             </p>
