@@ -72,9 +72,9 @@ const Gateway = ({ onEnterIT }) => {
         {/* Astroadvyc Tile */}
         <motion.a
           href="https://astroadvyc.com"
-          className="gateway-tile clean-tile glow"
+          className="gateway-tile clean-tile"
           variants={itemVariants}
-          whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(212,175,55,0.3)" }}
+          whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(212,175,55,0.15)" }}
           whileTap={{ scale: 0.98 }}
         >
           <img src="/astroadvyc_logo.png" alt="Astroadvyc" className="gt-clean-logo gt-astro-logo" />
@@ -97,9 +97,9 @@ const Gateway = ({ onEnterIT }) => {
 
         {/* IT Service Tile */}
         <motion.div
-          className="gateway-tile clean-tile glow cursor-pointer"
+          className="gateway-tile clean-tile cursor-pointer"
           variants={itemVariants}
-          whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(0,195,255,0.3)" }}
+          whileHover={{ y: -10, scale: 1.02, boxShadow: "0 20px 40px rgba(212,175,55,0.15)" }}
           whileTap={{ scale: 0.98 }}
           onClick={onEnterIT}
         >

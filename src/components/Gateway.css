@@ -165,7 +165,7 @@
 }
 
 .clean-tile:hover {
-  border-color: rgba(212, 175, 55, 0.4);
+  border-color: rgba(212, 175, 55, 0.15);
 }
 
 .gt-clean-logo {
@@ -181,11 +181,11 @@
 }
 
 .clean-tile:hover .gt-it-logo {
-  transform: scale(1.55) !important;
+  transform: scale(1.9) !important;
 }
 
 .clean-tile:hover .gt-foundation-logo {
-  transform: scale(1.25) !important;
+  transform: scale(1.6) !important;
 }
 
 .gt-btn-primary {
