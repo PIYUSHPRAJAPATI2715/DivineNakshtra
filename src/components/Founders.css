@@ -84,14 +84,15 @@
 }
 
 .founder-info {
-  padding: 2rem;
+  padding: 1.5rem 0.5rem;
   text-align: center;
 }
 
 .founder-info h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   margin-bottom: 0.3rem;
+  white-space: nowrap;
 }
 
 .founder-role {
