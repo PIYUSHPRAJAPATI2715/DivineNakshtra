@@ -113,7 +113,7 @@ const Astroadvyc = () => {
 
               <div className="modal-body">
                 <div className="modal-text-content">
-                  <img src="/astroadvyc_logo.png" alt="Astroadvyc" className="modal-logo" />
+                  <img src="/astro.png" alt="Astroadvyc" className="modal-logo" />
                   <h3 className="modal-title">Astroadvyc: Your Destiny, Decoded.</h3>
                   <div className="modal-desc" style={{ textAlign: 'justify' }}>
                     <p>Astroadvyc connects ancient astrology with modern life through a powerful digital platform. Get instant guidance from verified astrologers, tarot readers, and pandits anytime, anywhere. Find clarity in love, career, relationships, and life decisions with trusted spiritual experts.</p>

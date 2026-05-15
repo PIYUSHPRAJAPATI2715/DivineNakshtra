@@ -108,7 +108,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(5, 5, 16, 0.5);
+  background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -170,6 +170,7 @@
 .gt-para {
   margin-bottom: 0.6rem;
 }
+
 .gt-para:last-child {
   margin-bottom: 0;
 }
@@ -259,7 +260,7 @@
     height: 120px;
     padding: 1rem;
   }
-  
+
   .gt-content {
     padding: 1.5rem;
   }
