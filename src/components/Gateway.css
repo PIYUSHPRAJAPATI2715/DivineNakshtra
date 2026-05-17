@@ -162,18 +162,18 @@
 
 .skip-intro-btn {
   position: absolute;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 2rem;
+  right: 2rem;
   background: transparent;
   color: var(--text-muted);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.8rem 2rem;
+  padding: 0.4rem 1rem;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 2;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   letter-spacing: 1px;
 }
 
@@ -372,8 +372,8 @@
 }
 
 .cluster-logo {
-  max-width: 400px;
-  height: 180px;
+  max-width: 600px;
+  height: 280px;
   object-fit: contain;
   margin-bottom: 2rem;
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
