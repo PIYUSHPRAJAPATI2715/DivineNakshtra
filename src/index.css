@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap');
 
 :root {
-  --bg-dark: #050510;
-  --bg-light: #111122;
+  --bg-dark: #0d1128;
+  --bg-light: #1c1d33;
   --primary-gold: #D4AF37;
   --primary-gold-dim: rgba(212, 175, 55, 0.5);
   --text-main: #f0f0f0;
   --text-muted: #a0a0b0;
-  --glass-bg: rgba(20, 20, 45, 0.5);
+  --glass-bg: rgba(20, 20, 45, 0.4);
   --glass-border: rgba(255, 255, 255, 0.08);
   --gradient-gold: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%);
-  --gradient-bg: linear-gradient(180deg, #050510 0%, #0a0a1a 100%);
+  --gradient-bg: linear-gradient(-45deg, #0d1128, #181028, #11203b, #1e1e36);
   --card-hover: rgba(255, 255, 255, 0.05);
 }
 
@@ -28,9 +28,17 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-dark);
   background: var(--gradient-bg);
+  background-size: 400% 400%;
+  animation: cosmicBackground 15s ease infinite;
   color: var(--text-main);
   overflow-x: hidden;
   min-height: 100vh;
+}
+
+@keyframes cosmicBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 h1, h2, h3, h4, h5, h6 {

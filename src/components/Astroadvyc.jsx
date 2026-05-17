@@ -70,7 +70,21 @@ const Astroadvyc = () => {
               See Full Story
             </motion.button>
           </motion.div>
-
+          {/* Astrology Learning Tile */}
+          <motion.div
+            className="product-square-tile glass glow disabled-tile"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="tile-logo-wrapper">
+              <img src="/astrolearning.png" alt="Astrology Learning" className="tile-logo" style={{ transform: 'scale(1.3)' }} />
+            </div>
+            <div className="coming-soon-badge">
+              Coming Soon
+            </div>
+          </motion.div>
           {/* Divine Nakshatra Foundation Tile */}
           <motion.div
             className="product-square-tile glass glow disabled-tile"
@@ -86,6 +100,8 @@ const Astroadvyc = () => {
               Coming Soon
             </div>
           </motion.div>
+
+
         </div>
       </div>
 

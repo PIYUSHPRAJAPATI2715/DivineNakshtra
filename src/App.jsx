@@ -29,6 +29,10 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [showGateway]);
+
   return (
     <div className="app-container">
       <AnimatePresence>
